@@ -1,27 +1,38 @@
 #include "cracker.hpp"
 #include <iostream>
+#include <cmath>
 
-std::string Cracker::checkHash(std::string inputHash)
+
+str Cracker::checkHash(str inputHash)
 {
     return "Not implemented.";
 }
 
-std::string MD5crack::matchHash(std::string inputHash)
+int Cracker::checkBase(int base)
+{
+    for(int i = 1; i < 10; i++)
+    {
+        
+    }
+}
+
+str MD5crack::matchHash(str inputHash)
 {
     return "Not implemented.";
 }
 
-std::string SHA1crack::matchHash(std::string inputHash)
+str SHA1crack::matchHash(str inputHash)
 {
     return "Not implemented.";
 }
 
-std::string SHA256crack::matchHash(std::string inputHash)
+str SHA256crack::matchHash(str inputHash)
 {
     return "Not implemented.";
 }
 
-std::string SHA512crack::matchHash(std::string inputHash)
+str SHA512crack::matchHash(str inputHash)
 {
     return "Not implemented.";
 }
+

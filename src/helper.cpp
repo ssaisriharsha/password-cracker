@@ -1,16 +1,16 @@
 #include "cracker.hpp"
 #include <iostream>
+#include <iomanip>
 
 int main()
 {
-    MD5crack abc;
-    SHA1crack def;
-    SHA256crack ghi;
-    SHA512crack jkl;
-    std::cout << Cracker::checkHash("abc") << std::endl;
-    std::cout << abc.matchHash("abc") << std::endl;
-    std::cout << def.matchHash("def") << std::endl;
-    std::cout << ghi.matchHash("ghi") << std::endl;
-    std::cout << jkl.matchHash("jkl") << std::endl;
+    std::cout << std::boolalpha;
+    str inputHash;
+    std::cout << "Enter the hash: ";
+    std::cin >> inputHash;
+    std::cout << inputHash.size() << std::endl;
+    int base = std::stoi(inputHash.substr(4, 2));
+    std::cout << base << std::endl;
+    // std::cout << (pow(2, 6) == base) << std::endl;
     return 0;
 }
