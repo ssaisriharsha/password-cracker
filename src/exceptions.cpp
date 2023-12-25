@@ -4,3 +4,8 @@ const char *InvalidBase::what() const noexcept
 {
     return "Invalid base given.";
 }
+
+const char *InvalidHashException::what() const noexcept
+{
+    return "Given hash is not a valid hash.";
+}

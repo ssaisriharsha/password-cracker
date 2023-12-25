@@ -4,6 +4,13 @@
 
 class InvalidBase: std::exception
 {
+    public:
+    virtual const char *what() const noexcept override;
+};
+
+class InvalidHashException: std::exception
+{
+    public:
     virtual const char *what() const noexcept override;
 };
 
