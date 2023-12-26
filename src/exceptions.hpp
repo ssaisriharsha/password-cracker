@@ -14,4 +14,10 @@ class InvalidHashException: std::exception
     virtual const char *what() const noexcept override;
 };
 
+class InvalidActionException: std::exception
+{
+    public:
+    virtual const char *what() const noexcept override;
+};
+
 #endif
