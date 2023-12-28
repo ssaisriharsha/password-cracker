@@ -10,14 +10,15 @@ class Cracker
 {
     private:
     // int bits;
-    // str ENCODING;
     protected:
+    str ENCODING;
     str GIVENHASH;
-    str testHash;
+    // str testHash;
     str password;
     public:
     static str checkHash(str inputHash, int bits) noexcept(false);
-    virtual str matchHash(str inputHash) = 0;
+    virtual str matchHash() = 0;
+    virtual str generateHash() noexcept = 0;
     static int checkBase(int base) noexcept(false);
     [[noreturn]]static void baseError() noexcept(false);
 };
@@ -25,33 +26,37 @@ class Cracker
 class MD5crack: Cracker
 {
     public:
-    MD5crack(){};
+    MD5crack(str inputHash, str ENCODING){GIVENHASH = inputHash;this->ENCODING = ENCODING;};
     ~MD5crack(){};
-    virtual str matchHash(str inputHash) override;
+    virtual str matchHash() override;
+    virtual str generateHash() noexcept override;
 };
 
 class SHA1crack: Cracker
 {
     public:
-    SHA1crack(){};
+    SHA1crack(str inputHash, str ENCODING){GIVENHASH = inputHash;this->ENCODING = ENCODING;};
     ~SHA1crack(){};
-    virtual str matchHash(str inputHash) override;
+    virtual str matchHash() override;
+    virtual str generateHash() noexcept override;
 };
 
 class SHA256crack: Cracker
 {
     public:
-    SHA256crack() {};
+    SHA256crack(str inputHash, str ENCODING) {GIVENHASH = inputHash;this->ENCODING = ENCODING;};
     ~SHA256crack() {};
-    virtual str matchHash(str inputHash) override;
+    virtual str matchHash() override;
+    virtual str generateHash() noexcept override;
 };
 
 class SHA512crack: Cracker
 {
     public:
-    SHA512crack() {};
+    SHA512crack(str inputHash, str ENCODING) {GIVENHASH = inputHash;this->ENCODING = ENCODING;};
     ~SHA512crack() {};
-    virtual str matchHash(str inputHash) override;
+    virtual str matchHash() override;
+    virtual str generateHash() noexcept override;
 };
 
 #endif

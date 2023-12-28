@@ -30,22 +30,22 @@ int Cracker::checkBase(int base) noexcept(false)
     baseError();
 }
 
-str MD5crack::matchHash(str inputHash)
+str MD5crack::matchHash()
 {
     return "Not implemented.";
 }
 
-str SHA1crack::matchHash(str inputHash)
+str SHA1crack::matchHash()
 {
     return "Not implemented.";
 }
 
-str SHA256crack::matchHash(str inputHash)
+str SHA256crack::matchHash()
 {
     return "Not implemented.";
 }
 
-str SHA512crack::matchHash(str inputHash)
+str SHA512crack::matchHash()
 {
     return "Not implemented.";
 }
@@ -54,3 +54,25 @@ str SHA512crack::matchHash(str inputHash)
 {
     throw InvalidBase();
 }
+
+str MD5crack::generateHash() noexcept
+{
+    return "Not implemented.";
+}
+
+str SHA1crack::generateHash() noexcept
+{
+    return "Not implemented.";
+}
+
+str SHA256crack::generateHash() noexcept
+{
+    return "Not implemented.";
+}
+
+str SHA512crack::generateHash() noexcept
+{
+    return "Not implemented.";
+}
+
+
